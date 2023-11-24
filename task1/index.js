@@ -18,7 +18,9 @@ const tests = [
 ]
 
 const isPalindrome = str => {
+	// Уберу все лишние символы, кроме букв и цифр
 	const formattedStr = str.replace(/[^а-яa-z0-9]/gi, '').toLowerCase()
+	// Сравню строку с ее перевернутой версией, если совпадает - значит строка палиндром
 	return formattedStr === formattedStr.split('').reverse().join('')
 }
 
